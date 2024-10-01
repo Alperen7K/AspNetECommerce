@@ -12,22 +12,12 @@ public class EfProductDal : EfEntityRepositoryBase<Product, PostgreSqlContext>, 
         throw new NotImplementedException();
     }
 
+    public List<ProductDetailDto> GetAllProductDetailsByCategory(int categoryId)
+    {
+        throw new NotImplementedException();
+    }
+
     public ProductDetailDto GetProductDetailById(int productId)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool AddProduct(Product product)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool UpdateProduct(Product product)
-    {
-        throw new NotImplementedException();
-    }
-
-    public bool DeleteProduct(Product product)
     {
         throw new NotImplementedException();
     }

@@ -8,11 +8,7 @@ public interface IProductDal : IEntityRepository<Product>
 {
     List<ProductDetailDto> GetAllProductDetails();
 
+    List<ProductDetailDto> GetAllProductDetailsByCategory(int categoryId);
+
     ProductDetailDto GetProductDetailById(int productId);
-
-    Boolean AddProduct(Product product);
-
-    Boolean UpdateProduct(Product product);
-
-    Boolean DeleteProduct(Product product);
 }
