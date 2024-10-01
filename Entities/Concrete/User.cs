@@ -1,6 +1,8 @@
+using Core.Entities;
+
 namespace Entities.Concrete;
 
-public class User
+public class User:IEntity
 {
     public int UserId { get; set; }
     public string Email { get; set; }

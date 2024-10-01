@@ -1,6 +1,8 @@
+using Core.Entities;
+
 namespace Entities.Concrete;
 
-public class Cart
+public class Cart:IEntity
 {
     public int CartId { get; set; }
     public int UserId { get; set; }
