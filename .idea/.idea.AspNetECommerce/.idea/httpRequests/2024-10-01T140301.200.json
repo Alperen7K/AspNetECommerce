@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2024-10-02",
+    "temperatureC": 25,
+    "temperatureF": 76,
+    "summary": "Chilly"
+  },
+  {
+    "date": "2024-10-03",
+    "temperatureC": -19,
+    "temperatureF": -2,
+    "summary": "Hot"
+  },
+  {
+    "date": "2024-10-04",
+    "temperatureC": 31,
+    "temperatureF": 87,
+    "summary": "Freezing"
+  },
+  {
+    "date": "2024-10-05",
+    "temperatureC": 9,
+    "temperatureF": 48,
+    "summary": "Hot"
+  },
+  {
+    "date": "2024-10-06",
+    "temperatureC": 24,
+    "temperatureF": 75,
+    "summary": "Bracing"
+  }
+]
