@@ -9,19 +9,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Entities/Concrete/OperationClaim.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Entities/Concrete/User.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Entities/Concrete/UserOperationClaim.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Extensions/ClaimExtensions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Security/Encyption/SecurityKeyHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Security/Encyption/SigningCredentialsHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Security/Hashing/HashingHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/AccessToken.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/ITokenHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/JwtHelper.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/TokenOptions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Abstract/IDataResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Abstract/IResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/DataResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/ErrorResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/Result.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/SuccessResult.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AspNetECommerce.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetECommerce.sln" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,13 +35,13 @@
     <setting file="file://$PROJECT_DIR$/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70e0af6a98af49a29cd9c09a3d1a4beb6f10/d7/55141dcd/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2mpHLKCuil0GPsI2BgSmpKNyiNT" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -57,26 +51,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.WebAPI: http.executor": "Run",
-    ".NET Project.WebApi.executor": "Run",
-    "HTTP Request.WebAPI | #1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.WebAPI: http.executor&quot;: &quot;Run&quot;,
+    &quot;.NET Project.WebApi.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.WebAPI | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Project.WebApi">
     <configuration name="WebApi" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/WebAPI/bin/Debug/net8.0/WebAPI" />
@@ -118,6 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727766539964</updated>
       <workItem from="1727766541275" duration="13115000" />
+      <workItem from="1727849401703" duration="2727000" />
     </task>
     <servers />
   </component>
