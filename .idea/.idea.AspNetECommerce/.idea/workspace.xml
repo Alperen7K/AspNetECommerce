@@ -9,12 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Abstract/IDataResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Abstract/IResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/DataResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/ErrorResult.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/Result.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Results/Concrete/SuccessResult.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Interceptors/AspectInterceptorSelector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Interceptors/MethodInterception.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.csproj" afterDir="false" />
     </list>
@@ -112,7 +109,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727766539964</updated>
       <workItem from="1727766541275" duration="13115000" />
-      <workItem from="1727849401703" duration="2727000" />
+      <workItem from="1727849401703" duration="5335000" />
     </task>
     <servers />
   </component>
