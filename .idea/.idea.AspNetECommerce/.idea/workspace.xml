@@ -9,11 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Interceptors/AspectInterceptorSelector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Interceptors/MethodInterception.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Interceptors/MethodInterceptionBaseAttribute.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Utilities/Security/Encyption/SecurityKeyHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Security/Encryption/SecurityKeyHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Utilities/Security/Encyption/SigningCredentialsHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Security/Encryption/SigningCredentialsHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +31,7 @@
     <setting file="file://$PROJECT_DIR$/WebAPI/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70e0af6a98af49a29cd9c09a3d1a4beb6f10/d7/55141dcd/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ab5d70dc7c3b99d44387cbbda331aa77b3c4657caf25d2487ba4ac9bdad93a/TokenOptions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -109,7 +110,7 @@
       <option name="presentableId" value="Default" />
       <updated>1727766539964</updated>
       <workItem from="1727766541275" duration="13115000" />
-      <workItem from="1727849401703" duration="5335000" />
+      <workItem from="1727849401703" duration="7822000" />
     </task>
     <servers />
   </component>
