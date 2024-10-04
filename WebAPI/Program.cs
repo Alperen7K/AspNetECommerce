@@ -1,4 +1,6 @@
 using System.Text;
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
 using Core.Utilities.Security.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Core.Utilities.Security.Encyption;
@@ -21,6 +23,13 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ValidAudience = tokenOptions.Audience,
         IssuerSigningKey = SecurityKeyHelper.CreateSecurityKey(tokenOptions.SecurityKey),
     };
+});
+
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+{
+    // containerBuilder.RegisterModule(new AutofacB)
 });
 
 builder.Services.AddControllers();

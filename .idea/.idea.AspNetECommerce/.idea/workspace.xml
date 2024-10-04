@@ -9,11 +9,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Business/Abstract/IAuthService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/Business/BusinessRules.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/Concrete/OperationClaim.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Entities/Concrete/OperationClaim.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/Concrete/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Entities/Concrete/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetECommerce.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetECommerce.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/AccessToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/AccessToken.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/Concrete/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Concrete/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +121,8 @@
       <workItem from="1727766541275" duration="13115000" />
       <workItem from="1727849401703" duration="8105000" />
       <workItem from="1727934373468" duration="2670000" />
+      <workItem from="1728027244074" duration="3665000" />
+      <workItem from="1728041135074" duration="4509000" />
     </task>
     <servers />
   </component>
