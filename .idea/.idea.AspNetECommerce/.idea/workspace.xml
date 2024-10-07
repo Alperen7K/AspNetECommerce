@@ -9,16 +9,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Business/Abstract/IAuthService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Utilities/Business/BusinessRules.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Constants/Messages.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/ValidationRules/ValidationRules/AuthValidator.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Aspects/Autofac/Validation/ValidationAspect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/CrossCuttingConcerns/Validation/ValidationTool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/DependencyResolvers/CoreModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Extensions/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/IoC/ICoreModule.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Utilities/IoC/ServiceTool.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AspNetECommerce.sln" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetECommerce.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/AccessToken.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/AccessToken.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Concrete/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/Concrete/User.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Business.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Business.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/IUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/IUserDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/DTO's/UserForRegisterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/DTO's/UserForRegisterDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/WebAPI.csproj" afterDir="false" />
     </list>
@@ -58,27 +67,45 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.WebAPI: http.executor&quot;: &quot;Run&quot;,
-    &quot;.NET Project.WebApi.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.WebAPI | #1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.WebAPI: http.executor": "Run",
+    ".NET Project.WebApi.executor": "Debug",
+    "HTTP Request.WebAPI | #1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.WebApi">
+    <configuration name="WebApi" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/WebAPI/bin/Debug/net8.0/WebAPI" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/WebAPI" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/WebAPI/WebAPI.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net8.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <configuration name="WebApi" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/WebAPI/bin/Debug/net8.0/WebAPI" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -100,12 +127,32 @@
     <configuration name="WebAPI | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
     </configuration>
+    <configuration name="WebAPI | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/WebAPI/WebAPI.http" requestIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="WebAPI: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile" temporary="true">
+      <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebAPI/WebAPI.csproj" />
+      <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
+      <option name="LAUNCH_PROFILE_NAME" value="http" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="GENERATE_APPLICATIONHOST_CONFIG" value="1" />
+      <option name="SHOW_IIS_EXPRESS_OUTPUT" value="0" />
+      <option name="SEND_DEBUG_REQUEST" value="1" />
+      <option name="ADDITIONAL_IIS_EXPRESS_ARGUMENTS" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
     <list>
+      <item itemvalue=".NET Launch Settings Profile.WebAPI: http" />
       <item itemvalue=".NET Project.WebApi" />
       <item itemvalue="HTTP Request.WebAPI | #1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue=".NET Launch Settings Profile.WebAPI: http" />
         <item itemvalue="HTTP Request.WebAPI | #1" />
       </list>
     </recent_temporary>
@@ -123,6 +170,8 @@
       <workItem from="1727934373468" duration="2670000" />
       <workItem from="1728027244074" duration="3665000" />
       <workItem from="1728041135074" duration="4509000" />
+      <workItem from="1728277957418" duration="1408000" />
+      <workItem from="1728291506154" duration="5911000" />
     </task>
     <servers />
   </component>

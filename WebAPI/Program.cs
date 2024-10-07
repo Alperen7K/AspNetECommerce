@@ -1,6 +1,10 @@
 using System.Text;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Business.DependencyResolvers.Autofac;
+using Core.DependencyResolvers;
+using Core.Extensions;
+using Core.Utilities.IoC;
 using Core.Utilities.Security.Jwt;
 using Microsoft.IdentityModel.Tokens;
 using Core.Utilities.Security.Encyption;
@@ -29,7 +33,14 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
-    // containerBuilder.RegisterModule(new AutofacB)
+    containerBuilder.RegisterModule(new AutofacBusinessModule());
+});
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddDependencyResolvers(new ICoreModule[]
+{
+    new CoreModule(),
 });
 
 builder.Services.AddControllers();
