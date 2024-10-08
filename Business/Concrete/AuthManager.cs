@@ -3,10 +3,13 @@ using Abstract.Concrete;
 using Business.Abstract;
 using Business.Constants;
 using Core.Entities.Concrete;
+using Core.Utilities.Business;
 using Core.Utilities.Security.Jwt;
+using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using Core.Utilities.Security.Hashing;
+using Business.ValidationRules.FluentValidation.Auth;
 
 namespace Business.Concrete;
 
@@ -21,8 +24,15 @@ public class AuthManager : IAuthService
         _tokenHelper = tokenHelper;
     }
 
+    [ValidationAspect(typeof(RegisterValidator))]
     public IDataResult<User> Register(UserForRegisterDto userForRegisterDto, string password)
     {
+        IResult result = BusinessRules.Run(UserExists(userForRegisterDto.Email));
+        if (result != null)
+        {
+            return new ErrorDataResult<User>(result.Message);
+        }
+
         byte[] passwordHash, passwordSalt;
 
         HashingHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
@@ -34,7 +44,6 @@ public class AuthManager : IAuthService
             LastName = userForRegisterDto.LastName,
             PasswordHash = passwordHash,
             PasswordSalt = passwordSalt,
-            Status = true,
         };
 
         _userService.Add(user);
@@ -55,7 +64,7 @@ public class AuthManager : IAuthService
             return new ErrorResult(Messages.UserAlreadyRegistered);
         }
 
-        return new ErrorResult(Messages.UserNotFound);
+        return new SuccessResult(Messages.UserNotFound);
     }
 
     public IDataResult<AccessToken> CreateAccessToken(User user)

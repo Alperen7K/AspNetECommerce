@@ -9,15 +9,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AspNetECommerce.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetECommerce.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Entities/Concrete/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Entities/Concrete/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/PostgreSql.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/PostgreSql.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/Concrete/User.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Entities/DTO's/UserForRegisterDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/DTO's/UserForRegisterDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/ValidationRules/ValidationRules/AuthValidator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/ValidationRules/FluentValidation/Auth/RegisterValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Utilities/Interceptors/AspectInterceptorSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Interceptors/AspectInterceptorSelector.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,6 +32,7 @@
     <setting file="file://$PROJECT_DIR$/WebAPI/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70e0af6a98af49a29cd9c09a3d1a4beb6f10/d7/55141dcd/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a0741529c8554d199992ef9e50684668d82800/5b/cc3f637f/Monitor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/413341ec7da6e42cb630e52ba9208edacb2e7267da1d9296f51628fcd35e81d9/SingleQueryingEnumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a8f525b34e074d7c1c1ee2f97d75fed82d55ae9102858934b3ef12954923d91/InternalDbSet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/ab5d70dc7c3b99d44387cbbda331aa77b3c4657caf25d2487ba4ac9bdad93a/TokenOptions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -63,27 +60,27 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;.NET Launch Settings Profile.WebAPI: http.executor&quot;: &quot;Debug&quot;,
-    &quot;.NET Project.WebApi.executor&quot;: &quot;Debug&quot;,
-    &quot;HTTP Request.WebAPI | #1.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.89522344&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.WebAPI: http.executor": "Debug",
+    ".NET Project.WebApi.executor": "Debug",
+    "HTTP Request.WebAPI | #1.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.66358024",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Project.WebApi">
     <configuration name="WebApi" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/WebAPI/bin/Debug/net8.0/WebAPI" />
@@ -170,7 +167,9 @@
       <workItem from="1728277957418" duration="1408000" />
       <workItem from="1728291506154" duration="9032000" />
       <workItem from="1728366382510" duration="3459000" />
-      <workItem from="1728372202104" duration="4276000" />
+      <workItem from="1728372202104" duration="6998000" />
+      <workItem from="1728385705731" duration="1345000" />
+      <workItem from="1728389714934" duration="4889000" />
     </task>
     <servers />
   </component>
@@ -197,32 +196,6 @@
           </properties>
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs</url>
-          <line>30</line>
-          <properties documentPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" containingFunctionPresentation="Method 'Register'">
-            <startOffsets>
-              <option value="763" />
-            </startOffsets>
-            <endOffsets>
-              <option value="791" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs</url>
-          <line>28</line>
-          <properties documentPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" containingFunctionPresentation="Method 'Register'">
-            <startOffsets>
-              <option value="718" />
-            </startOffsets>
-            <endOffsets>
-              <option value="740" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

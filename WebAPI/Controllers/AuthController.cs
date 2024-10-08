@@ -18,12 +18,6 @@ public class AuthController : Controller
     [HttpPost("register")]
     public ActionResult Register(UserForRegisterDto userForRegisterDto)
     {
-        var userExist = _authService.UserExists(userForRegisterDto.Email);
-        if (!userExist.Success)
-        {
-            return BadRequest(userExist);
-        }
-
         var register = _authService.Register(userForRegisterDto, userForRegisterDto.Password);
 
         if (!register.Success)
@@ -32,11 +26,5 @@ public class AuthController : Controller
         }
 
         return Ok(register);
-    }
-
-    [HttpGet("selamla")]
-    public ActionResult Selamla()
-    {
-        return Ok("Selam");
     }
 }
