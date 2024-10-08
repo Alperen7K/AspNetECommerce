@@ -21,11 +21,22 @@ public class AuthController : Controller
         var userExist = _authService.UserExists(userForRegisterDto.Email);
         if (!userExist.Success)
         {
-            return BadRequest(userExist.Message);
+            return BadRequest(userExist);
         }
 
-        _authService.Register(userForRegisterDto, userForRegisterDto.Password);
+        var register = _authService.Register(userForRegisterDto, userForRegisterDto.Password);
 
-        return Ok(userExist.Message);
+        if (!register.Success)
+        {
+            return BadRequest(register);
+        }
+
+        return Ok(register);
+    }
+
+    [HttpGet("selamla")]
+    public ActionResult Selamla()
+    {
+        return Ok("Selam");
     }
 }

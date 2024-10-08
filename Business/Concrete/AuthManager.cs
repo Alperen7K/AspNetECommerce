@@ -34,7 +34,7 @@ public class AuthManager : IAuthService
             LastName = userForRegisterDto.LastName,
             PasswordHash = passwordHash,
             PasswordSalt = passwordSalt,
-            Status = true
+            Status = true,
         };
 
         _userService.Add(user);
@@ -55,7 +55,7 @@ public class AuthManager : IAuthService
             return new ErrorResult(Messages.UserAlreadyRegistered);
         }
 
-        return new SuccessResult(Messages.UserNotFound);
+        return new ErrorResult(Messages.UserNotFound);
     }
 
     public IDataResult<AccessToken> CreateAccessToken(User user)

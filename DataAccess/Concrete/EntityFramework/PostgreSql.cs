@@ -1,5 +1,6 @@
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
+using User = Core.Entities.Concrete.User;
 
 namespace DataAccess.Concrete.EntityFramework;
 
