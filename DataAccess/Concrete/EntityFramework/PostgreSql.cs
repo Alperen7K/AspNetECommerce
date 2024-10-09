@@ -1,3 +1,4 @@
+using Core.Entities.Concrete;
 using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 using User = Core.Entities.Concrete.User;
@@ -16,4 +17,5 @@ public class PostgreSqlContext : DbContext
     public DbSet<Category> Categories { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Cart> Carts { get; set; }
+    public DbSet<OperationClaim> OperationClaimes { get; set; }
 }
