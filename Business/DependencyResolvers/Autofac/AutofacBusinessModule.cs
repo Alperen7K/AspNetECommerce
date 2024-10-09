@@ -5,6 +5,7 @@ using DataAccess.Abstract;
 using Castle.DynamicProxy;
 using Core.Utilities.Interceptors;
 using Autofac.Extras.DynamicProxy;
+using Core.Entities.Concrete;
 using Core.Utilities.Security.Jwt;
 using DataAccess.Concrete.EntityFramework;
 
@@ -16,11 +17,15 @@ public class AutofacBusinessModule : Module
     {
         builder.RegisterType<EfUserDal>().As<IUserDal>();
 
-        builder.RegisterType<AuthManager>().As<IAuthService>();
-
         builder.RegisterType<EfOperationClaimDal>().As<IOperationClaimDal>();
 
+        builder.RegisterType<EfUserOperationClaimDal>().As<IUserOperationClaimDal>();
+
+        builder.RegisterType<AuthManager>().As<IAuthService>();
+
         builder.RegisterType<OperationClaimManager>().As<IOperationClaimService>();
+
+        builder.RegisterType<UserOperationClaimManager>().As<IUserOperationClaimService>();
 
         builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 

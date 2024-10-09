@@ -14,4 +14,6 @@ public interface IOperationClaimService
     IResult Delete(OperationClaim operationClaim);
 
     IDataResult<List<OperationClaim>> GetAll();
+
+    IResult OperationClaimExist(string operationClaimName);
 }

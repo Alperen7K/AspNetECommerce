@@ -19,4 +19,9 @@ public static class Messages
     public static string OperationClaimExist = "OperationClaim already exist";
     public static string OperationClaimGetted = "Operation claim getted successfully";
     public static string OperationClaimNotFound = "OperationClaim could not be found";
+    public static string UserOperationClaimAdded = "UserOperationClaim successfully added";
+    public static string UserOperationClaimExist = "UserOperationClaim already exist";
+    public static string UserOperationClaimDeleted = "UserOperationClaim deleted successfully";
+    public static string UserOperationClaimUpdated = "UserOperationClaim successfully updated";
+    public static string UserOperationClaimGetted = "UserOperationClaim getted successfully";
 }

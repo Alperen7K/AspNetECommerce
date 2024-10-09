@@ -10,18 +10,22 @@ using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using Core.Utilities.Security.Hashing;
 using Business.ValidationRules.FluentValidation.Auth;
+using DataAccess.Abstract;
 
 namespace Business.Concrete;
 
 public class AuthManager : IAuthService
 {
     private IUserService _userService;
+    private IUserOperationClaimService _userOperationClaimService;
     private ITokenHelper _tokenHelper;
 
-    public AuthManager(IUserService userService, ITokenHelper tokenHelper)
+    public AuthManager(IUserService userService, ITokenHelper tokenHelper,
+        IUserOperationClaimService userOperationClaimService)
     {
         _userService = userService;
         _tokenHelper = tokenHelper;
+        _userOperationClaimService = userOperationClaimService;
     }
 
     [ValidationAspect(typeof(RegisterValidator))]
@@ -47,6 +51,11 @@ public class AuthManager : IAuthService
         };
 
         _userService.Add(user);
+
+        var userOperationClaim = new UserOperationClaim
+            { UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 6 }; // OperationClaimId = 6 is default 'customer' claim
+
+        _userOperationClaimService.Add(userOperationClaim);
 
         return new SuccessDataResult<User>(user, Messages.UserRegistered);
     }
