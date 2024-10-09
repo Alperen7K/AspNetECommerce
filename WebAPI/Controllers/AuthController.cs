@@ -33,6 +33,24 @@ public class AuthController : Controller
         return Ok(register);
     }
 
+    [HttpPost("login")]
+    public ActionResult Login(UserForLoginDto userForLoginDto)
+    {
+        var userToLoogin = _authService.Login(userForLoginDto);
+        if (!userToLoogin.Success)
+        {
+            return BadRequest(userToLoogin);
+        }
+
+        var result = _authService.CreateAccessToken(userToLoogin.Data);
+        if (result.Success)
+        {
+            return Ok(result);
+        }
+
+        return BadRequest(result);
+    }
+
     [HttpGet("operation-claim/get")]
     public ActionResult GetOperationClaim(int id)
     {

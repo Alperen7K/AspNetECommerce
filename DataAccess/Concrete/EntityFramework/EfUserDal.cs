@@ -9,6 +9,17 @@ public class EfUserDal : EfEntityRepositoryBase<User, PostgreSqlContext>, IUserD
 {
     public List<OperationClaim> GetClaims(User user)
     {
-        throw new NotImplementedException();
+        using (var context = new PostgreSqlContext())
+        {
+            var result = from operationClaim in context.UserOperationClaimes
+                join userOperationClaim in context.UserOperationClaimes
+                    on operationClaim.Id equals userOperationClaim.OperationClaimId
+                where userOperationClaim.UserId == user.Id
+                select new OperationClaim
+                {
+                    Id = operationClaim.Id //, Name = operationClaim.Name
+                };
+            return result.ToList();
+        }
     }
 }

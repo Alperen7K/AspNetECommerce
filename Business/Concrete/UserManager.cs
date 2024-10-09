@@ -23,4 +23,9 @@ public class UserManager : IUserService
     {
         return _userDal.Get(u => u.Email == email);
     }
+
+    public List<OperationClaim> GetClaims(User user)
+    {
+        return   _userDal.GetClaims(user);
+    }
 }

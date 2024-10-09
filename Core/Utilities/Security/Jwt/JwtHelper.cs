@@ -10,14 +10,14 @@ namespace Core.Utilities.Security.Jwt
 {
     public class JwtHelper : ITokenHelper
     {
-        private readonly IConfiguration _configuration;
-        private readonly TokenOptions _tokenOptions;
+        public IConfiguration Configuration { get; }
+        private TokenOptions _tokenOptions;
         private DateTime _accessTokenExpiration;
 
         public JwtHelper(IConfiguration configuration)
         {
-            _configuration = configuration;
-            _tokenOptions = _configuration.GetSection("TokenOptions").Get<TokenOptions>();
+            Configuration = configuration;
+            _tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
         }
 
         public AccessToken CreateToken(User user, List<OperationClaim> operationClaims)

@@ -53,7 +53,9 @@ public class AuthManager : IAuthService
         _userService.Add(user);
 
         var userOperationClaim = new UserOperationClaim
-            { UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 6 }; // OperationClaimId = 6 is default 'customer' claim
+        {
+            UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 6
+        }; // OperationClaimId = 6 is default 'customer' claim
 
         _userOperationClaimService.Add(userOperationClaim);
 
@@ -62,7 +64,19 @@ public class AuthManager : IAuthService
 
     public IDataResult<User> Login(UserForLoginDto userForLoginDto)
     {
-        throw new NotImplementedException();
+        var userToCheck = _userService.GetByEmail(userForLoginDto.Email);
+        if (userToCheck == null)
+        {
+            return new ErrorDataResult<User>(Messages.UserNotFound);
+        }
+
+        if (!HashingHelper.VerifyPasswordHash(userForLoginDto.Password, userToCheck.PasswordHash,
+                userToCheck.PasswordSalt))
+        {
+            return new ErrorDataResult<User>(Messages.PasswordError);
+        }
+
+        return new SuccessDataResult<User>(userToCheck, Messages.SuccessfullLogin);
     }
 
     public IResult UserExists(string email)
@@ -78,6 +92,8 @@ public class AuthManager : IAuthService
 
     public IDataResult<AccessToken> CreateAccessToken(User user)
     {
-        throw new NotImplementedException();
+        var claims = _userService.GetClaims(user);
+        var accessToken = _tokenHelper.CreateToken(user, claims);
+        return new SuccessDataResult<AccessToken>(accessToken, Messages.AccessTokenCreated);
     }
 }

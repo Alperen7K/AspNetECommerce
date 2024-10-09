@@ -24,4 +24,7 @@ public static class Messages
     public static string UserOperationClaimDeleted = "UserOperationClaim deleted successfully";
     public static string UserOperationClaimUpdated = "UserOperationClaim successfully updated";
     public static string UserOperationClaimGetted = "UserOperationClaim getted successfully";
+    public static string PasswordError = "Password Error, please try again.";
+    public static string SuccessfullLogin = "Successfully login.";
+    public static string AccessTokenCreated = "Access token created successfully";
 }

@@ -7,4 +7,6 @@ public interface IUserService
     void Add(User user);
 
     User GetByEmail(string email);
+    
+    List<OperationClaim> GetClaims(User user);
 }
