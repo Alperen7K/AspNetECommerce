@@ -8,7 +8,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="" />
+    <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Business/ValidationRules/FluentValidation/Auth/LoginValidator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +26,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Business/ValidationRules/FluentValidation/Auth/RegisterValidator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Core/Utilities/Security/Encryption/SecurityKeyHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Core/Utilities/Security/Encryption/SigningCredentialsHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Core/Utilities/Security/Hashing/HashingHelper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -175,7 +181,7 @@
       <workItem from="1728389714934" duration="4889000" />
       <workItem from="1728452706795" duration="15203000" />
       <workItem from="1728491634718" duration="83000" />
-      <workItem from="1728540893414" duration="6111000" />
+      <workItem from="1728540893414" duration="7059000" />
     </task>
     <servers />
   </component>
@@ -243,13 +249,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Business/Concrete/AuthManager.cs</url>
-          <line>65</line>
+          <line>66</line>
           <properties documentPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" containingFunctionPresentation="Method 'Login'">
             <startOffsets>
-              <option value="2156" />
+              <option value="2203" />
             </startOffsets>
             <endOffsets>
-              <option value="2157" />
+              <option value="2204" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

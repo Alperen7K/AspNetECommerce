@@ -39,16 +39,10 @@ public class AuthController : Controller
         var userToLoogin = _authService.Login(userForLoginDto);
         if (!userToLoogin.Success)
         {
-            return BadRequest(userToLoogin);
+            return Ok(userToLoogin);
         }
 
-        var result = _authService.CreateAccessToken(userToLoogin.Data);
-        if (result.Success)
-        {
-            return Ok(result);
-        }
-
-        return BadRequest(result);
+        return Ok(_authService.CreateAccessToken(userToLoogin.Data));
     }
 
     [HttpGet("operation-claim/get")]

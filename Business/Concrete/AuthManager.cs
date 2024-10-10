@@ -54,7 +54,7 @@ public class AuthManager : IAuthService
 
         var userOperationClaim = new UserOperationClaim
         {
-            UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 6
+            UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 7
         }; // OperationClaimId = 6 is default 'customer' claim
 
         _userOperationClaimService.Add(userOperationClaim);
@@ -62,6 +62,7 @@ public class AuthManager : IAuthService
         return new SuccessDataResult<User>(user, Messages.UserRegistered);
     }
 
+    [ValidationAspect(typeof(LoginValidator))]
     public IDataResult<User> Login(UserForLoginDto userForLoginDto)
     {
         var userToCheck = _userService.GetByEmail(userForLoginDto.Email);
