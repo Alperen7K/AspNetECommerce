@@ -5,6 +5,7 @@ using Core.Utilities.Business;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
+using Entities.DTO_s;
 
 namespace Business.Concrete;
 
@@ -42,11 +43,11 @@ public class UserOperationClaimManager : IUserOperationClaimService
         return new SuccessDataResult<UserOperationClaim>(result, Messages.UserOperationClaimUpdated);
     }
 
-    public IDataResult<UserOperationClaim> GetByUserId(int id)
+    public IDataResult<List<UserOperationClaimDetailDto>> GetUserOperationClaimsByUserId(int id)
     {
-        var result = _userOperationClaimDal.Get(u => u.UserId == id);
+        var result = _userOperationClaimDal.GetUserOperationClaimsByUserId(id);
 
-        return new SuccessDataResult<UserOperationClaim>(result, Messages.UserOperationClaimGetted);
+        return new SuccessDataResult<List<UserOperationClaimDetailDto>>(result, Messages.UserOperationClaimGetted);
     }
 
     public IResult UserOperationClaimExist(int userId)

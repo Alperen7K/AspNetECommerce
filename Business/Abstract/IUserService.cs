@@ -9,4 +9,6 @@ public interface IUserService
     User GetByEmail(string email);
     
     List<OperationClaim> GetClaims(User user);
+    
+    User GetProfil(int id);
 }

@@ -28,4 +28,5 @@ public static class Messages
     public static string SuccessfullLogin = "Successfully login.";
     public static string AccessTokenCreated = "Access token created successfully";
     public static string? AuthorizationDenied = "Authorization denied, you can't access this service.";
+    public static string UserOperationClaimNotFound = "UserOperationClaim could not be found";
 }

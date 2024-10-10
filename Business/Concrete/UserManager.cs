@@ -28,4 +28,9 @@ public class UserManager : IUserService
     {
         return   _userDal.GetClaims(user);
     }
+
+    public User GetProfil(int id)
+    {
+        throw new NotImplementedException();
+    }
 }

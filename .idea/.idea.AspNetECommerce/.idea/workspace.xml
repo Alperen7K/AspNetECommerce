@@ -9,12 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/OperationClaimController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/DTO's/UserOperationClaimDetailDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Constants/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Constants/Messages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/IUserOperationClaimDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/IUserOperationClaimDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserOperationClaimDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserOperationClaimDal.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +187,7 @@
       <workItem from="1728389714934" duration="4889000" />
       <workItem from="1728452706795" duration="15203000" />
       <workItem from="1728491634718" duration="83000" />
-      <workItem from="1728540893414" duration="9584000" />
+      <workItem from="1728540893414" duration="13822000" />
     </task>
     <servers />
   </component>
@@ -215,10 +219,10 @@
           <line>35</line>
           <properties documentPath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" containingFunctionPresentation="Method 'Add'">
             <startOffsets>
-              <option value="1068" />
+              <option value="1056" />
             </startOffsets>
             <endOffsets>
-              <option value="1069" />
+              <option value="1057" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
@@ -254,10 +258,10 @@
           <line>66</line>
           <properties documentPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" containingFunctionPresentation="Method 'Login'">
             <startOffsets>
-              <option value="2203" />
+              <option value="2204" />
             </startOffsets>
             <endOffsets>
-              <option value="2204" />
+              <option value="2205" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
