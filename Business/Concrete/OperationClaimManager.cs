@@ -1,6 +1,7 @@
 using Business.Abstract;
 using Business.BusinessAspects.Autofac;
 using Business.Constants;
+using Core.Aspects.Autofac.Validation;
 using Core.Entities.Concrete;
 using Core.Utilities.Business;
 using Core.Utilities.Results.Abstract;
@@ -18,6 +19,7 @@ public class OperationClaimManager : IOperationClaimService
         _operationClaimDal = operationClaimDal;
     }
 
+    [SecuredOperations("SuperAdmin")]
     public IDataResult<OperationClaim> Get(int id)
     {
         var result = _operationClaimDal.Get(x => x.Id == id);
@@ -29,7 +31,7 @@ public class OperationClaimManager : IOperationClaimService
         return new ErrorDataResult<OperationClaim>(Messages.OperationClaimNotFound);
     }
 
-    [SecuredOperations("OperationClaim.Add,Admin")]
+    [SecuredOperations("SuperAdmin")]
     public IResult Add(OperationClaim operationClaim)
     {
         IResult result = BusinessRules.Run(OperationClaimExist(operationClaim.Name));
@@ -44,6 +46,7 @@ public class OperationClaimManager : IOperationClaimService
         return new SuccessResult(Messages.OperationClaimAdded);
     }
 
+    [SecuredOperations("SuperAdmin")]
     public IDataResult<OperationClaim> Update(OperationClaim operationClaim)
     {
         _operationClaimDal.Update(operationClaim);
@@ -52,12 +55,14 @@ public class OperationClaimManager : IOperationClaimService
         return new SuccessDataResult<OperationClaim>(modifiedData, Messages.OperationClaimUpdated);
     }
 
+    [SecuredOperations("SuperAdmin")]
     public IResult Delete(OperationClaim operationClaim)
     {
         _operationClaimDal.Delete(operationClaim);
         return new SuccessResult(Messages.OperationClaimDeleted);
     }
 
+    [SecuredOperations("SuperAdmin")]
     public IDataResult<List<OperationClaim>> GetAll()
     {
         return new SuccessDataResult<List<OperationClaim>>(_operationClaimDal.GetAll(), Messages.OperationClaimListed);

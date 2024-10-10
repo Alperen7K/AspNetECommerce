@@ -23,7 +23,6 @@ public class UserOperationClaimManager : IUserOperationClaimService
 
         if (result != null) return result;
 
-
         _userOperationClaimDal.Add(userOperationClaim);
         return new SuccessResult(Messages.UserOperationClaimAdded);
     }

@@ -54,8 +54,8 @@ public class AuthManager : IAuthService
 
         var userOperationClaim = new UserOperationClaim
         {
-            UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 7
-        }; // OperationClaimId = 6 is default 'customer' claim
+            UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 11
+        }; // OperationClaimId = 6 is default 'Customer' claim
 
         _userOperationClaimService.Add(userOperationClaim);
 

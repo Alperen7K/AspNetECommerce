@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
 
-[Route("api/[controller]")]
+[Route("[controller]")]
 [ApiController]
 public class AuthController : Controller
 {
@@ -43,35 +43,5 @@ public class AuthController : Controller
         }
 
         return Ok(_authService.CreateAccessToken(userToLoogin.Data));
-    }
-
-    [HttpGet("operation-claim/get")]
-    public ActionResult GetOperationClaim(int id)
-    {
-        return Ok(_operationClaimService.Get(id));
-    }
-
-    [HttpGet("operation-claim/get-all")]
-    public ActionResult GetAllOperationClaims()
-    {
-        return Ok(_operationClaimService.GetAll());
-    }
-
-    [HttpPost("operation-claim/create")]
-    public ActionResult CreateOperationClaim(OperationClaim operationClaim)
-    {
-        return Ok(_operationClaimService.Add(operationClaim));
-    }
-
-    [HttpPut("operation-claim/update")]
-    public ActionResult UpdateOperationClaim(OperationClaim operationClaim)
-    {
-        return Ok(_operationClaimService.Update(operationClaim));
-    }
-
-    [HttpDelete("operation-claim/delete")]
-    public ActionResult DeleteOperationClaim(OperationClaim operationClaim)
-    {
-        return Ok(_operationClaimService.Delete(operationClaim));
     }
 }
