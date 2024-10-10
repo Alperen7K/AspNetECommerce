@@ -1,4 +1,5 @@
 using Business.Abstract;
+using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Core.Entities.Concrete;
 using Core.Utilities.Business;
@@ -19,14 +20,16 @@ public class OperationClaimManager : IOperationClaimService
 
     public IDataResult<OperationClaim> Get(int id)
     {
-        var result=_operationClaimDal.Get(x => x.Id == id);
+        var result = _operationClaimDal.Get(x => x.Id == id);
         if (result != null)
         {
-            return new SuccessDataResult<OperationClaim>(result,Messages.OperationClaimGetted);
+            return new SuccessDataResult<OperationClaim>(result, Messages.OperationClaimGetted);
         }
+
         return new ErrorDataResult<OperationClaim>(Messages.OperationClaimNotFound);
     }
 
+    [SecuredOperations("OperationClaim.Add,Admin")]
     public IResult Add(OperationClaim operationClaim)
     {
         IResult result = BusinessRules.Run(OperationClaimExist(operationClaim.Name));

@@ -27,4 +27,5 @@ public static class Messages
     public static string PasswordError = "Password Error, please try again.";
     public static string SuccessfullLogin = "Successfully login.";
     public static string AccessTokenCreated = "Access token created successfully";
+    public static string? AuthorizationDenied = "Authorization denied, you can't access this service.";
 }

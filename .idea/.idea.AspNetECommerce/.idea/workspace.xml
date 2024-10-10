@@ -9,19 +9,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Business/BusinessAspects/Autofac/SecuredOperations.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Core/Extensions/ClaimPrincipalExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AspNetECommerce.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/AspNetECommerce.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Constants/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Constants/Messages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Core.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Core.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Utilities/Security/Hashing/HashingHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Security/Hashing/HashingHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/JwtHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Security/Jwt/JwtHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserDal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/AuthController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.Development.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/PostgreSql.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/PostgreSql.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,13 +80,14 @@
     ".NET Project.WebApi.executor": "Debug",
     "HTTP Request.WebAPI | #1.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.5450569",
+    "XThreadsFramesViewSplitterKey": "0.54475045",
     "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.keymap",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -187,6 +186,8 @@
       <workItem from="1728385705731" duration="1345000" />
       <workItem from="1728389714934" duration="4889000" />
       <workItem from="1728452706795" duration="15203000" />
+      <workItem from="1728491634718" duration="83000" />
+      <workItem from="1728540893414" duration="5968000" />
     </task>
     <servers />
   </component>
@@ -213,7 +214,63 @@
           </properties>
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs</url>
+          <line>33</line>
+          <properties documentPath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" containingFunctionPresentation="Method 'Add'">
+            <startOffsets>
+              <option value="993" />
+            </startOffsets>
+            <endOffsets>
+              <option value="994" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Core/Utilities/Interceptors/MethodInterception.cs</url>
+          <line>24</line>
+          <properties documentPath="$PROJECT_DIR$/Core/Utilities/Interceptors/MethodInterception.cs" containingFunctionPresentation="Method 'Intercept'">
+            <startOffsets>
+              <option value="526" />
+            </startOffsets>
+            <endOffsets>
+              <option value="547" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserDal.cs</url>
+          <line>10</line>
+          <properties documentPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserDal.cs" containingFunctionPresentation="Method 'GetClaims'">
+            <startOffsets>
+              <option value="318" />
+            </startOffsets>
+            <endOffsets>
+              <option value="319" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Business/Concrete/AuthManager.cs</url>
+          <line>65</line>
+          <properties documentPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" containingFunctionPresentation="Method 'Login'">
+            <startOffsets>
+              <option value="2156" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2157" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

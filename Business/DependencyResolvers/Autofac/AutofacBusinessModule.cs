@@ -5,7 +5,6 @@ using DataAccess.Abstract;
 using Castle.DynamicProxy;
 using Core.Utilities.Interceptors;
 using Autofac.Extras.DynamicProxy;
-using Core.Entities.Concrete;
 using Core.Utilities.Security.Jwt;
 using DataAccess.Concrete.EntityFramework;
 

@@ -17,6 +17,6 @@ public class PostgreSqlContext : DbContext
     public DbSet<Category> Categories { get; set; }
     public DbSet<User> Users { get; set; }
     public DbSet<Cart> Carts { get; set; }
-    public DbSet<OperationClaim> OperationClaimes { get; set; }
-    public DbSet<UserOperationClaim> UserOperationClaimes { get; set; }
+    public DbSet<OperationClaim> OperationClaims { get; set; }
+    public DbSet<UserOperationClaim> UserOperationClaims { get; set; }
 }
