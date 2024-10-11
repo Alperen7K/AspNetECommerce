@@ -1,5 +1,6 @@
 using Business.Abstract;
 using Core.Entities.Concrete;
+using Entities.DTO_s;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
@@ -19,5 +20,11 @@ public class UserOperationClaimController : Controller
     public ActionResult<UserOperationClaim> GetUserOperationClaim(int id)
     {
         return Ok(_userOperationClaimService.GetUserOperationClaimsByUserId(id));
+    }
+
+    [HttpPost]
+    public ActionResult<UserOperationClaim> CreateUserOperationClaim(AddUserOperationClaimDto addUserOperationClaimDto)
+    {
+        return Ok(_userOperationClaimService.Add(addUserOperationClaimDto));
     }
 }

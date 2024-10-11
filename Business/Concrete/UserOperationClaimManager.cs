@@ -18,13 +18,15 @@ public class UserOperationClaimManager : IUserOperationClaimService
         _userOperationClaimDal = userOperationClaimDal;
     }
 
-    public IResult Add(UserOperationClaim userOperationClaim)
+    public IResult Add(AddUserOperationClaimDto addUserOperationClaimDto)
     {
-        IResult result = BusinessRules.Run(UserOperationClaimExist(userOperationClaim.UserId));
+        foreach (var operationClaimId in addUserOperationClaimDto.OperationClaimIds)
+        {
+            
+            _userOperationClaimDal.Add(new UserOperationClaim
+                { UserId = addUserOperationClaimDto.UserId, OperationClaimId = operationClaimId });
+        }
 
-        if (result != null) return result;
-
-        _userOperationClaimDal.Add(userOperationClaim);
         return new SuccessResult(Messages.UserOperationClaimAdded);
     }
 

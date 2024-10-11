@@ -52,12 +52,10 @@ public class AuthManager : IAuthService
 
         _userService.Add(user);
 
-        var userOperationClaim = new UserOperationClaim
-        {
-            UserId = _userService.GetByEmail(user.Email).Id, OperationClaimId = 11
-        }; // OperationClaimId = 6 is default 'Customer' claim
+        var userOperationClaims = new AddUserOperationClaimDto
+            { UserId = _userService.GetByEmail(user.Email).Id, OperationClaimIds = [11] };
 
-        _userOperationClaimService.Add(userOperationClaim);
+        _userOperationClaimService.Add(userOperationClaims);
 
         return new SuccessDataResult<User>(user, Messages.UserRegistered);
     }

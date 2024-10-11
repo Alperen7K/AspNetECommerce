@@ -9,16 +9,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Entities/DTO's/UserOperationClaimDetailDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/DTO's/AddUserOperationClaimDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Abstract/IOperationClaimService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IOperationClaimService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Constants/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Constants/Messages.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/Abstract/IUserOperationClaimDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Abstract/IUserOperationClaimDal.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserOperationClaimDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfUserOperationClaimDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,29 +72,29 @@
     <option name="openDirectoriesWithSingleClick" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Launch Settings Profile.WebAPI: http.executor": "Debug",
-    ".NET Project.WebApi.executor": "Debug",
-    "HTTP Request.WebAPI | #1.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "XThreadsFramesViewSplitterKey": "0.54475045",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Launch Settings Profile.WebAPI: http.executor&quot;: &quot;Debug&quot;,
+    &quot;.NET Project.WebApi.executor&quot;: &quot;Debug&quot;,
+    &quot;HTTP Request.WebAPI | #1.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.7309469&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected=".NET Project.WebApi">
+}</component>
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebAPI: http">
     <configuration name="WebApi" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/WebAPI/bin/Debug/net8.0/WebAPI" />
       <option name="PROGRAM_PARAMETERS" value="" />
@@ -187,7 +185,8 @@
       <workItem from="1728389714934" duration="4889000" />
       <workItem from="1728452706795" duration="15203000" />
       <workItem from="1728491634718" duration="83000" />
-      <workItem from="1728540893414" duration="13822000" />
+      <workItem from="1728540893414" duration="16005000" />
+      <workItem from="1728659308137" duration="89000" />
     </task>
     <servers />
   </component>
@@ -255,13 +254,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Business/Concrete/AuthManager.cs</url>
-          <line>66</line>
+          <line>64</line>
           <properties documentPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" containingFunctionPresentation="Method 'Login'">
             <startOffsets>
-              <option value="2204" />
+              <option value="2147" />
             </startOffsets>
             <endOffsets>
-              <option value="2205" />
+              <option value="2148" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />

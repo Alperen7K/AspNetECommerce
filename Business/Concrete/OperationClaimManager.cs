@@ -78,4 +78,9 @@ public class OperationClaimManager : IOperationClaimService
 
         return new SuccessResult();
     }
+
+    public IResult OperationClaimExistById(int id)
+    {
+        throw new NotImplementedException();
+    }
 }
