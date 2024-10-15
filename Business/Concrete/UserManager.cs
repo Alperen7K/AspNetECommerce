@@ -1,5 +1,7 @@
 using Abstract.Concrete;
+using Business.Constants;
 using Core.Entities.Concrete;
+using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
 
@@ -26,7 +28,14 @@ public class UserManager : IUserService
 
     public List<OperationClaim> GetClaims(User user)
     {
-        return   _userDal.GetClaims(user);
+        return _userDal.GetClaims(user);
+    }
+
+    public IResult IsUserExistById(int id)
+    {
+        var result = _userDal.Get(u => u.Id == id);
+        if (result != null) return new SuccessResult();
+        return new ErrorResult(Messages.UserNotFound);
     }
 
     public User GetProfil(int id)

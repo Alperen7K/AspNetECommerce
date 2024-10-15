@@ -6,11 +6,14 @@ namespace Business.Abstract;
 
 public interface IUserOperationClaimService
 {
-    IResult Add(AddUserOperationClaimDto addUserOperationClaimDto);
+    IResult Add(int userId, int operationClaimId);
+    IResult MultipleAdd(AddUserOperationClaimDto addUserOperationClaimDto);
 
     IResult Delete(UserOperationClaim userOperationClaim);
 
     IDataResult<UserOperationClaim> Update(UserOperationClaim userOperationClaim);
 
     IDataResult<List<UserOperationClaimDetailDto>> GetUserOperationClaimsByUserId(int id);
+
+    IResult UserOperationClaimExist(int userId, int operationClaimId);
 }

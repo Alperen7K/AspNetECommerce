@@ -55,7 +55,7 @@ public class AuthManager : IAuthService
         var userOperationClaims = new AddUserOperationClaimDto
             { UserId = _userService.GetByEmail(user.Email).Id, OperationClaimIds = [11] };
 
-        _userOperationClaimService.Add(userOperationClaims);
+        _userOperationClaimService.MultipleAdd(userOperationClaims);
 
         return new SuccessDataResult<User>(user, Messages.UserRegistered);
     }

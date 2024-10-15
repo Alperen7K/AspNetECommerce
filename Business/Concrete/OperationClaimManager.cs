@@ -19,7 +19,7 @@ public class OperationClaimManager : IOperationClaimService
         _operationClaimDal = operationClaimDal;
     }
 
-    [SecuredOperations("SuperAdmin")]
+    // [SecuredOperations("SuperAdmin")]
     public IDataResult<OperationClaim> Get(int id)
     {
         var result = _operationClaimDal.Get(x => x.Id == id);

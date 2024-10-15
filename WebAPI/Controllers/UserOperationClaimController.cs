@@ -25,6 +25,6 @@ public class UserOperationClaimController : Controller
     [HttpPost]
     public ActionResult<UserOperationClaim> CreateUserOperationClaim(AddUserOperationClaimDto addUserOperationClaimDto)
     {
-        return Ok(_userOperationClaimService.Add(addUserOperationClaimDto));
+        return Ok(_userOperationClaimService.MultipleAdd(addUserOperationClaimDto));
     }
 }
