@@ -35,4 +35,6 @@ public static class Messages
     public static string CategoryUpdated = "Category updated successfully";
     public static string CategoryDeleted = "Category deleted successfully";
     public static string CategoryListed = "Category listed successfully";
+    public static string ProductAdded = "Product added successfully";
+    public static string ProductsListed = "Products Listed successfully";
 }

@@ -9,15 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Business/Abstract/ICategoryService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Business/Concrete/CategoryManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Entities/DTO's/AddCategoryDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/CategoryController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Abstract/IProductService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Concrete/ProductManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/ProductController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Constants/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Constants/Messages.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfProductDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfProductDal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Entities/DTO's/ProductDetailDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Entities/DTO's/ProductDetailDto.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/2c27297230274c5c83de48297646212a4c00/33/2bb5c422/0200000Apdb9.il" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/70e0af6a98af49a29cd9c09a3d1a4beb6f10/d7/55141dcd/IConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/a0741529c8554d199992ef9e50684668d82800/5b/cc3f637f/Monitor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/135d867c4d4e51c04ef59bb0217b3148b1206070e29579a6ce187125a52bf54e/AbstractValidator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/37b199de95706e702653d64c5cba36e845b60b4f3a99efe021b494ff79898c/CryptoProviderFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/413341ec7da6e42cb630e52ba9208edacb2e7267da1d9296f51628fcd35e81d9/SingleQueryingEnumerable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/757f24738a3cb57db1f81117822ff5041b2d177885b6775612207d9121427e/RegistrationBuilder.cs" root0="FORCE_HIGHLIGHTING" />
@@ -193,7 +195,7 @@
       <workItem from="1728885409631" duration="3760000" />
       <workItem from="1728896240104" duration="3240000" />
       <workItem from="1728984213131" duration="2855000" />
-      <workItem from="1729057198716" duration="10214000" />
+      <workItem from="1729057198716" duration="14200000" />
     </task>
     <servers />
   </component>
@@ -201,6 +203,17 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

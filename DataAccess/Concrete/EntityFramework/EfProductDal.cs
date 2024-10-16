@@ -9,11 +9,25 @@ public class EfProductDal : EfEntityRepositoryBase<Product, PostgreSqlContext>, 
 {
     public List<ProductDetailDto> GetAllProductDetails()
     {
-        throw new NotImplementedException();
+        using (PostgreSqlContext context = new PostgreSqlContext())
+        {
+            var result = from p in context.Products
+                join c in context.Categories on p.CategoryId equals c.CategoryId
+                select new ProductDetailDto
+                {
+                    ProductId = p.ProductId,
+                    ProductName = p.ProductName,
+                    CategoryName = c.CategoryName,
+                    CategoryId = c.CategoryId,
+                    UnitPrice = p.UnitPrice,
+                };
+            return result.ToList();
+        }
     }
 
     public List<ProductDetailDto> GetAllProductDetailsByCategory(int categoryId)
     {
+        
         throw new NotImplementedException();
     }
 

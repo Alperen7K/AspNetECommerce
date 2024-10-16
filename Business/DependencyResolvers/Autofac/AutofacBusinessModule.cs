@@ -21,6 +21,8 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<EfUserOperationClaimDal>().As<IUserOperationClaimDal>();
 
         builder.RegisterType<EfCategoryDal>().As<ICategoryDal>();
+        
+        builder.RegisterType<EfProductDal>().As<IProductDal>();
 
         builder.RegisterType<AuthManager>().As<IAuthService>();
 
@@ -29,6 +31,8 @@ public class AutofacBusinessModule : Module
         builder.RegisterType<UserOperationClaimManager>().As<IUserOperationClaimService>();
 
         builder.RegisterType<CategoryManager>().As<ICategoryService>();
+        
+        builder.RegisterType<ProductManager>().As<IProductService>();
 
         builder.RegisterType<JwtHelper>().As<ITokenHelper>();
 
