@@ -28,11 +28,6 @@ public class UserOperationClaimManager : IUserOperationClaimService
 
     public IResult Add(int userId, int operationClaimId)
     {
-        var result = BusinessRules.Run(_operationClaimService.OperationClaimExistById(operationClaimId));
-        if (!result.Success)
-            throw new Exception(result.Message);
-        // new ErrorResult(result.Message);
-
         _userOperationClaimDal.Add(new UserOperationClaim
             { UserId = userId, OperationClaimId = operationClaimId });
 
@@ -42,7 +37,8 @@ public class UserOperationClaimManager : IUserOperationClaimService
     [ValidationAspect(typeof(MultipleUserOperationClaimValidator))]
     public IResult MultipleAdd(AddUserOperationClaimDto addUserOperationClaimDto)
     {
-        IResult result = BusinessRules.Run(_userService.IsUserExistById(addUserOperationClaimDto.UserId));
+        IResult result = BusinessRules.Run(_userService.IsUserExistById(addUserOperationClaimDto.UserId),
+            _operationClaimService.OperationClaimExistByIds(addUserOperationClaimDto.OperationClaimIds));
 
         if (!result.Success) return new ErrorResult(result.Message);
 

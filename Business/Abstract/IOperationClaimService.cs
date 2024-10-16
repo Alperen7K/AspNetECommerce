@@ -16,5 +16,5 @@ public interface IOperationClaimService
     IDataResult<List<OperationClaim>> GetAll();
 
     IResult OperationClaimExist(string operationClaimName);
-    IResult OperationClaimExistById(int id);
+    IResult OperationClaimExistByIds(int[] ids);
 }

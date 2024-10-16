@@ -79,12 +79,17 @@ public class OperationClaimManager : IOperationClaimService
         return new SuccessResult();
     }
 
-    public IResult OperationClaimExistById(int id)
+    public IResult OperationClaimExistByIds(int[] ids)
     {
-        var result = _operationClaimDal.Get(c => c.Id == id);
+        List<int> absentIds = new List<int>();
 
-        if (result != null) return new SuccessResult(Messages.OperationClaimExist);
+        foreach (var id in ids)
+        {
+            var result = _operationClaimDal.Get(c => c.Id == id);
+            if (result == null) absentIds.Add(id);
+        }
 
-        return new ErrorResult(Messages.OperationClaimNotFound);
+        if (absentIds.Count == 0) return new SuccessDataResult<List<int>>(Messages.OperationClaimExist);
+        return new ErrorDataResult<List<int>>(absentIds, Messages.OperationClaimNotFound);
     }
 }
