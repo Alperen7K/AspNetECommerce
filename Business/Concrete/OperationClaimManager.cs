@@ -81,6 +81,10 @@ public class OperationClaimManager : IOperationClaimService
 
     public IResult OperationClaimExistById(int id)
     {
-        throw new NotImplementedException();
+        var result = _operationClaimDal.Get(c => c.Id == id);
+
+        if (result != null) return new SuccessResult(Messages.OperationClaimExist);
+
+        return new ErrorResult(Messages.OperationClaimNotFound);
     }
 }

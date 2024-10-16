@@ -9,16 +9,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Business/ValidationRules/FluentValidation/MultipleUserOperationClaimValidator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Utilities/Business/BusinessRules.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Utilities/Business/BusinessRules.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +186,8 @@
       <workItem from="1728659308137" duration="391000" />
       <workItem from="1728885409631" duration="3760000" />
       <workItem from="1728896240104" duration="3240000" />
-      <workItem from="1728984213131" duration="403000" />
+      <workItem from="1728984213131" duration="2855000" />
+      <workItem from="1729057198716" duration="179000" />
     </task>
     <servers />
   </component>
