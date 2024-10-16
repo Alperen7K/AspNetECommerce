@@ -27,4 +27,16 @@ public class UserOperationClaimController : Controller
     {
         return Ok(_userOperationClaimService.MultipleAdd(addUserOperationClaimDto));
     }
+
+    [HttpDelete("{id}")]
+    public ActionResult<UserOperationClaim> DeleteUserOperationClaim(int id)
+    {
+        return Ok(_userOperationClaimService.Delete(id));
+    }
+
+    [HttpGet("user/{id}")]
+    public ActionResult<List<UserOperationClaim>> GetUserOperationClaimByUserId(int id)
+    {
+        return Ok(_userOperationClaimService.GetUserOperationClaimsByUserId(id));
+    }
 }

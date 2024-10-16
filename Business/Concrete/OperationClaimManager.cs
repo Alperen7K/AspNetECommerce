@@ -90,6 +90,7 @@ public class OperationClaimManager : IOperationClaimService
         }
 
         if (absentIds.Count == 0) return new SuccessDataResult<List<int>>(Messages.OperationClaimExist);
+
         return new ErrorDataResult<List<int>>(absentIds, Messages.OperationClaimNotFound);
     }
 }

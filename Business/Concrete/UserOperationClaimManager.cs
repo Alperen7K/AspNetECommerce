@@ -55,9 +55,14 @@ public class UserOperationClaimManager : IUserOperationClaimService
         return new SuccessResult(Messages.UserOperationClaimAdded);
     }
 
-    public IResult Delete(UserOperationClaim userOperationClaim)
+    public IResult Delete(int id)
     {
-        _userOperationClaimDal.Delete(userOperationClaim);
+        var result = _userOperationClaimDal.Get(c => c.Id == id);
+
+        if (result == null) return new ErrorResult(Messages.UserOperationClaimNotFound);
+
+        _userOperationClaimDal.Delete(result);
+
         return new SuccessResult(Messages.UserOperationClaimDeleted);
     }
 
@@ -72,9 +77,12 @@ public class UserOperationClaimManager : IUserOperationClaimService
 
     public IDataResult<List<UserOperationClaimDetailDto>> GetUserOperationClaimsByUserId(int id)
     {
-        var result = _userOperationClaimDal.GetUserOperationClaimsByUserId(id);
+        IResult result = BusinessRules.Run(_userService.IsUserExistById(id));
 
-        return new SuccessDataResult<List<UserOperationClaimDetailDto>>(result, Messages.UserOperationClaimGetted);
+        if (!result.Success) return new ErrorDataResult<List<UserOperationClaimDetailDto>>(result.Message);
+
+        return new SuccessDataResult<List<UserOperationClaimDetailDto>>(
+            _userOperationClaimDal.GetUserOperationClaimsByUserId(id), Messages.UserOperationClaimGetted);
     }
 
     public IResult UserOperationClaimExist(int userId, int operationClaimId)
