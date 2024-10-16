@@ -3,9 +3,9 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.53">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>1025</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1105</IntrospectionStateNumber>
       <ServerVersion>16.4</ServerVersion>
-      <StartupTime>1728542966</StartupTime>
+      <StartupTime>1729057211</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -1400,7 +1400,7 @@ true posixrules
 13212||10|C|G
 13212||-9223372036854775808|U|G
 13212||10|U|G</Grants>
-      <IntrospectionStateNumber>1025</IntrospectionStateNumber>
+      <IntrospectionStateNumber>1105</IntrospectionStateNumber>
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4823,13 +4823,21 @@ true posixrules
     <schema id="264" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>1025</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-10-10.07:44:33</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>1105</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-10-16.07:50:29</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="265" parent="264" name="operationclaime_id_seq">
+    <sequence id="265" parent="264" name="categories_categoryid_seq">
+      <ObjectId>24673</ObjectId>
+      <SequenceIdentity>1</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>1086</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <sequence id="266" parent="264" name="operationclaime_id_seq">
       <ObjectId>16441</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
@@ -4837,7 +4845,7 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="266" parent="264" name="useroperationclaimes_id_seq">
+    <sequence id="267" parent="264" name="useroperationclaimes_id_seq">
       <ObjectId>16448</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
@@ -4845,7 +4853,7 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="267" parent="264" name="users_id_seq">
+    <sequence id="268" parent="264" name="users_id_seq">
       <ObjectId>16501</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
@@ -4853,63 +4861,63 @@ true posixrules
       <StoredType>integer|0s</StoredType>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="268" parent="264" name="CartProducts">
+    <table id="269" parent="264" name="CartProducts">
       <ObjectId>16426</ObjectId>
       <StateNumber>825</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="269" parent="264" name="Carts">
+    <table id="270" parent="264" name="Carts">
       <ObjectId>16414</ObjectId>
       <StateNumber>822</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="270" parent="264" name="Categories">
-      <ObjectId>16404</ObjectId>
-      <StateNumber>819</StateNumber>
+    <table id="271" parent="264" name="Categories">
+      <ObjectId>24674</ObjectId>
+      <StateNumber>1104</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="271" parent="264" name="OperationClaims">
+    <table id="272" parent="264" name="OperationClaims">
       <ObjectId>16442</ObjectId>
       <StateNumber>1019</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="272" parent="264" name="Products">
+    <table id="273" parent="264" name="Products">
       <ObjectId>16397</ObjectId>
-      <StateNumber>813</StateNumber>
+      <StateNumber>1101</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="273" parent="264" name="UserOperationClaims">
+    <table id="274" parent="264" name="UserOperationClaims">
       <ObjectId>16449</ObjectId>
       <StateNumber>1022</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="274" parent="264" name="Users">
+    <table id="275" parent="264" name="Users">
       <ObjectId>16502</ObjectId>
       <StateNumber>1007</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="275" parent="268" name="cartid">
+    <column id="276" parent="269" name="cartid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>770</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="276" parent="268" name="productid">
+    <column id="277" parent="269" name="productid">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>770</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="277" parent="268" name="cartproducts_cartid_fkey">
+    <foreign-key id="278" parent="269" name="cartproducts_cartid_fkey">
       <ColNames>cartid</ColNames>
       <ObjectId>16431</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4917,7 +4925,7 @@ true posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16414</RefTableId>
     </foreign-key>
-    <foreign-key id="278" parent="268" name="cartproducts_productid_fkey">
+    <foreign-key id="279" parent="269" name="cartproducts_productid_fkey">
       <ColNames>productid</ColNames>
       <ObjectId>16436</ObjectId>
       <OnDelete>cascade</OnDelete>
@@ -4925,7 +4933,7 @@ true posixrules
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16397</RefTableId>
     </foreign-key>
-    <index id="279" parent="268" name="cartproducts_pkey">
+    <index id="280" parent="269" name="cartproducts_pkey">
       <ColNames>cartid
 productid</ColNames>
       <ObjectId>16429</ObjectId>
@@ -4934,34 +4942,34 @@ productid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="280" parent="268" name="cartproducts_pkey">
+    <key id="281" parent="269" name="cartproducts_pkey">
       <ObjectId>16430</ObjectId>
       <Primary>1</Primary>
       <StateNumber>770</StateNumber>
       <UnderlyingIndexId>16429</UnderlyingIndexId>
     </key>
-    <column id="281" parent="269" name="cartid">
+    <column id="282" parent="270" name="cartid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>759</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="282" parent="269" name="UserId">
+    <column id="283" parent="270" name="UserId">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>873</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="283" parent="269" name="carts_users_id_fk">
+    <foreign-key id="284" parent="270" name="carts_users_id_fk">
       <ColNames>UserId</ColNames>
       <ObjectId>24667</ObjectId>
       <StateNumber>1015</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16502</RefTableId>
     </foreign-key>
-    <index id="284" parent="269" name="carts_pkey">
+    <index id="285" parent="270" name="carts_pkey">
       <ColNames>cartid</ColNames>
       <ObjectId>16419</ObjectId>
       <Primary>1</Primary>
@@ -4969,47 +4977,49 @@ productid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="285" parent="269" name="fki_UserId">
+    <index id="286" parent="270" name="fki_UserId">
       <ColNames>UserId</ColNames>
       <ObjectId>16478</ObjectId>
       <StateNumber>875</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="286" parent="269" name="carts_pkey">
+    <key id="287" parent="270" name="carts_pkey">
       <ObjectId>16420</ObjectId>
       <Primary>1</Primary>
       <StateNumber>759</StateNumber>
       <UnderlyingIndexId>16419</UnderlyingIndexId>
     </key>
-    <column id="287" parent="270" name="categoryid">
+    <column id="288" parent="271" name="CategoryId">
+      <DefaultExpression>nextval(&apos;categories_categoryid_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>753</StateNumber>
+      <StateNumber>1092</StateNumber>
       <StoredType>integer|0s</StoredType>
+      <SequenceId>24673</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="288" parent="270" name="categoryname">
+    <column id="289" parent="271" name="CategoryName">
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>753</StateNumber>
+      <StateNumber>1098</StateNumber>
       <StoredType>varchar(250)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="289" parent="270" name="categories_pkey">
-      <ColNames>categoryid</ColNames>
-      <ObjectId>16407</ObjectId>
+    <index id="290" parent="271" name="categories_pkey">
+      <ColNames>CategoryId</ColNames>
+      <ObjectId>24678</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>753</StateNumber>
+      <StateNumber>1086</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="290" parent="270" name="categories_pkey">
-      <ObjectId>16408</ObjectId>
+    <key id="291" parent="271" name="categories_pkey">
+      <ObjectId>24679</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>753</StateNumber>
-      <UnderlyingIndexId>16407</UnderlyingIndexId>
+      <StateNumber>1086</StateNumber>
+      <UnderlyingIndexId>24678</UnderlyingIndexId>
     </key>
-    <column id="291" parent="271" name="Id">
+    <column id="292" parent="272" name="Id">
       <DefaultExpression>nextval(&apos;operationclaime_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5018,13 +5028,13 @@ productid</ColNames>
       <SequenceId>16441</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="292" parent="271" name="Name">
+    <column id="293" parent="272" name="Name">
       <Position>2</Position>
       <StateNumber>975</StateNumber>
       <StoredType>varchar(250)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <index id="293" parent="271" name="operationclaime_pkey">
+    <index id="294" parent="272" name="operationclaime_pkey">
       <ColNames>Id</ColNames>
       <ObjectId>16446</ObjectId>
       <Primary>1</Primary>
@@ -5032,48 +5042,48 @@ productid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="294" parent="271" name="operationclaime_pkey">
+    <key id="295" parent="272" name="operationclaime_pkey">
       <ObjectId>16447</ObjectId>
       <Primary>1</Primary>
       <StateNumber>776</StateNumber>
       <UnderlyingIndexId>16446</UnderlyingIndexId>
     </key>
-    <column id="295" parent="272" name="productid">
+    <column id="296" parent="273" name="productid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>750</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="296" parent="272" name="categoryid">
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-      <StateNumber>750</StateNumber>
-      <StoredType>integer|0s</StoredType>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="297" parent="272" name="productname">
+    <column id="297" parent="273" name="productname">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>750</StateNumber>
       <StoredType>varchar(250)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="298" parent="272" name="unitprice">
+    <column id="298" parent="273" name="unitprice">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>750</StateNumber>
       <StoredType>numeric|0s</StoredType>
       <TypeId>1700</TypeId>
     </column>
-    <foreign-key id="299" parent="272" name="products_categories_categoryid_fk">
+    <column id="299" parent="273" name="categoryid">
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+      <StateNumber>1101</StateNumber>
+      <StoredType>integer|0s</StoredType>
+      <TypeId>23</TypeId>
+    </column>
+    <foreign-key id="300" parent="273" name="products_categories_categoryid_fk">
       <ColNames>categoryid</ColNames>
-      <ObjectId>16409</ObjectId>
-      <StateNumber>756</StateNumber>
+      <ObjectId>24680</ObjectId>
+      <StateNumber>1104</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
-      <RefTableId>16404</RefTableId>
+      <RefTableId>24674</RefTableId>
     </foreign-key>
-    <index id="300" parent="272" name="products_pkey">
+    <index id="301" parent="273" name="products_pkey">
       <ColNames>productid</ColNames>
       <ObjectId>16402</ObjectId>
       <Primary>1</Primary>
@@ -5081,13 +5091,13 @@ productid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="301" parent="272" name="products_pkey">
+    <key id="302" parent="273" name="products_pkey">
       <ObjectId>16403</ObjectId>
       <Primary>1</Primary>
       <StateNumber>750</StateNumber>
       <UnderlyingIndexId>16402</UnderlyingIndexId>
     </key>
-    <column id="302" parent="273" name="Id">
+    <column id="303" parent="274" name="Id">
       <DefaultExpression>nextval(&apos;useroperationclaimes_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5096,33 +5106,33 @@ productid</ColNames>
       <SequenceId>16448</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="303" parent="273" name="UserId">
+    <column id="304" parent="274" name="UserId">
       <Position>2</Position>
       <StateNumber>876</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <column id="304" parent="273" name="OperationClaimId">
+    <column id="305" parent="274" name="OperationClaimId">
       <Position>3</Position>
       <StateNumber>990</StateNumber>
       <StoredType>integer|0s</StoredType>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="305" parent="273" name="useroperationclaimes_users_id_fk">
+    <foreign-key id="306" parent="274" name="useroperationclaimes_users_id_fk">
       <ColNames>UserId</ColNames>
       <ObjectId>24657</ObjectId>
       <StateNumber>1007</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16502</RefTableId>
     </foreign-key>
-    <foreign-key id="306" parent="273" name="useroperationclaimes_operationclaimes_id_fk">
+    <foreign-key id="307" parent="274" name="useroperationclaimes_operationclaimes_id_fk">
       <ColNames>OperationClaimId</ColNames>
       <ObjectId>24662</ObjectId>
       <StateNumber>1011</StateNumber>
       <RefKeyColPositions>1</RefKeyColPositions>
       <RefTableId>16442</RefTableId>
     </foreign-key>
-    <index id="307" parent="273" name="useroperationclaimes_pkey">
+    <index id="308" parent="274" name="useroperationclaimes_pkey">
       <ColNames>Id</ColNames>
       <ObjectId>16453</ObjectId>
       <Primary>1</Primary>
@@ -5130,19 +5140,19 @@ productid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="308" parent="273" name="2">
+    <index id="309" parent="274" name="2">
       <ColNames>UserId</ColNames>
       <ObjectId>16489</ObjectId>
       <StateNumber>880</StateNumber>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="309" parent="273" name="useroperationclaimes_pkey">
+    <key id="310" parent="274" name="useroperationclaimes_pkey">
       <ObjectId>16454</ObjectId>
       <Primary>1</Primary>
       <StateNumber>797</StateNumber>
       <UnderlyingIndexId>16453</UnderlyingIndexId>
     </key>
-    <column id="310" parent="274" name="Id">
+    <column id="311" parent="275" name="Id">
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
@@ -5151,49 +5161,49 @@ productid</ColNames>
       <SequenceId>16501</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="311" parent="274" name="FirstName">
+    <column id="312" parent="275" name="FirstName">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>943</StateNumber>
       <StoredType>varchar(250)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="312" parent="274" name="LastName">
+    <column id="313" parent="275" name="LastName">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>944</StateNumber>
       <StoredType>varchar(250)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="313" parent="274" name="PasswordSalt">
+    <column id="314" parent="275" name="PasswordSalt">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StateNumber>945</StateNumber>
       <StoredType>bytea|0s</StoredType>
       <TypeId>17</TypeId>
     </column>
-    <column id="314" parent="274" name="PasswordHash">
+    <column id="315" parent="275" name="PasswordHash">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StateNumber>946</StateNumber>
       <StoredType>bytea|0s</StoredType>
       <TypeId>17</TypeId>
     </column>
-    <column id="315" parent="274" name="Email">
+    <column id="316" parent="275" name="Email">
       <NotNull>1</NotNull>
       <Position>6</Position>
       <StateNumber>947</StateNumber>
       <StoredType>varchar(250)|0s</StoredType>
       <TypeId>1043</TypeId>
     </column>
-    <column id="316" parent="274" name="Status">
+    <column id="317" parent="275" name="Status">
       <DefaultExpression>false</DefaultExpression>
       <Position>7</Position>
       <StateNumber>948</StateNumber>
       <StoredType>boolean|0s</StoredType>
       <TypeId>16</TypeId>
     </column>
-    <index id="317" parent="274" name="users_pkey">
+    <index id="318" parent="275" name="users_pkey">
       <ColNames>Id</ColNames>
       <ObjectId>16509</ObjectId>
       <Primary>1</Primary>
@@ -5201,7 +5211,7 @@ productid</ColNames>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="318" parent="274" name="users_pkey">
+    <key id="319" parent="275" name="users_pkey">
       <ObjectId>16510</ObjectId>
       <Primary>1</Primary>
       <StateNumber>936</StateNumber>

@@ -9,11 +9,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ba704cef-3538-4769-834e-6898a55de9a9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Business/Abstract/ICategoryService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Business/Concrete/CategoryManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Entities/DTO's/AddCategoryDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebAPI/Controllers/CategoryController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/dataSources/128c6d91-6b9f-469f-a25e-9530a60b1374/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IUserOperationClaimService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/OperationClaimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/UserOperationClaimManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/UserOperationClaimController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Constants/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Constants/Messages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/DependencyResolvers/Autofac/AutofacBusinessModule.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +193,7 @@
       <workItem from="1728885409631" duration="3760000" />
       <workItem from="1728896240104" duration="3240000" />
       <workItem from="1728984213131" duration="2855000" />
-      <workItem from="1729057198716" duration="2331000" />
+      <workItem from="1729057198716" duration="10214000" />
     </task>
     <servers />
   </component>
@@ -241,19 +245,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Business/Concrete/AuthManager.cs</url>
-          <line>64</line>
-          <properties documentPath="$PROJECT_DIR$/Business/Concrete/AuthManager.cs" containingFunctionPresentation="Method 'Login'">
-            <startOffsets>
-              <option value="2155" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2156" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
