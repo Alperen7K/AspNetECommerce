@@ -40,9 +40,9 @@ public class ProductManager : IProductService
         return new SuccessDataResult<ProductDetailDto>(_productDal.GetProductDetailById(id), Messages.ProductsListed);
     }
 
-    public IDataResult<List<Product>> GetByCategory(int id)
+    public IDataResult<List<ProductDetailDto>> GetByCategory(int id)
     {
-        throw new NotImplementedException();
+        return new SuccessDataResult<List<ProductDetailDto>>(_productDal.GetAllProductDetailsByCategory(id),Messages.ProductsListedByCategory);
     }
 
     public IDataResult<Product> Update(Product product)

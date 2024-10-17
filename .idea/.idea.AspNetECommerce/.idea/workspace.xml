@@ -12,6 +12,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AspNetECommerce/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Abstract/IProductService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Abstract/IProductService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Business/Concrete/ProductManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Concrete/ProductManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Business/Constants/Messages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Business/Constants/Messages.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfProductDal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/DataAccess/Concrete/EntityFramework/EfProductDal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/ProductController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/ProductController.cs" afterDir="false" />
     </list>
@@ -191,7 +192,7 @@
       <workItem from="1728896240104" duration="3240000" />
       <workItem from="1728984213131" duration="2855000" />
       <workItem from="1729057198716" duration="14292000" />
-      <workItem from="1729144406738" duration="3478000" />
+      <workItem from="1729144406738" duration="4343000" />
     </task>
     <servers />
   </component>

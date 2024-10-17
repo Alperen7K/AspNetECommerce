@@ -41,4 +41,5 @@ public static class Messages
     public static string ProductExists = "Product exist";
     public static string ProductDoesNotExist = "Product doesn't exist";
     public static string ProductDeleted = "Product deleted successfully";
+    public static string ProductsListedByCategory = "Products listed for Category";
 }

@@ -45,4 +45,10 @@ public class ProductController : Controller
     {
         return Ok(_productService.GetById(id));
     }
+
+    [HttpGet("category/{id}")]
+    public ActionResult<List<ProductDetailDto>> GetProductsByCategory(int id)
+    {
+        return Ok(_productService.GetByCategory(id));
+    }
 }
