@@ -31,9 +31,13 @@ public class ProductManager : IProductService
             Messages.ProductsListed);
     }
 
-    public IDataResult<Product> GetById(int id)
+    public IDataResult<ProductDetailDto> GetById(int id)
     {
-        throw new NotImplementedException();
+        var result = BusinessRules.Run(ProductExists(id));
+
+        if (!result.Success) return new ErrorDataResult<ProductDetailDto>(result.Message);
+
+        return new SuccessDataResult<ProductDetailDto>(_productDal.GetProductDetailById(id), Messages.ProductsListed);
     }
 
     public IDataResult<List<Product>> GetByCategory(int id)
@@ -60,7 +64,7 @@ public class ProductManager : IProductService
         if (!result.Success) return new ErrorDataResult<Product>(result.Message);
 
         _productDal.Delete(_productDal.Get(p => p.ProductId == id));
-        
+
         return new SuccessResult(Messages.ProductDeleted);
     }
 

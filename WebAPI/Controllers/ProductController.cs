@@ -1,5 +1,6 @@
 using Business.Abstract;
 using Entities.Concrete;
+using Entities.DTO_s;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers;
@@ -37,5 +38,11 @@ public class ProductController : Controller
     public ActionResult<Product> DeleteProduct(int id)
     {
         return Ok(_productService.Delete(id));
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<ProductDetailDto> GetProductDetail(int id)
+    {
+        return Ok(_productService.GetById(id));
     }
 }

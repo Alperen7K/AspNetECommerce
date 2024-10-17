@@ -10,7 +10,7 @@ public interface IProductService
     
     IDataResult<List<ProductDetailDto>> GetAll();
     
-    IDataResult<Product> GetById(int id);
+    IDataResult<ProductDetailDto> GetById(int id);
     
     IDataResult<List<Product>> GetByCategory(int id);
     
