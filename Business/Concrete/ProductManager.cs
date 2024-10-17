@@ -1,5 +1,6 @@
 using Business.Abstract;
 using Business.Constants;
+using Core.Utilities.Business;
 using Core.Utilities.Results.Abstract;
 using Core.Utilities.Results.Concrete;
 using DataAccess.Abstract;
@@ -42,16 +43,32 @@ public class ProductManager : IProductService
 
     public IDataResult<Product> Update(Product product)
     {
-        throw new NotImplementedException();
+        var result = BusinessRules.Run(ProductExists(product.ProductId));
+
+        if (!result.Success) return new ErrorDataResult<Product>(result.Message);
+
+        _productDal.Update(product);
+
+        return new SuccessDataResult<Product>(_productDal.Get(p => p.ProductId == product.ProductId),
+            Messages.ProductUpdated);
     }
 
     public IResult Delete(int id)
     {
-        throw new NotImplementedException();
+        var result = BusinessRules.Run(ProductExists(id));
+
+        if (!result.Success) return new ErrorDataResult<Product>(result.Message);
+
+        _productDal.Delete(_productDal.Get(p => p.ProductId == id));
+        
+        return new SuccessResult(Messages.ProductDeleted);
     }
 
     public IResult ProductExists(int id)
     {
-        throw new NotImplementedException();
+        var isProductExists = _productDal.Get(p => p.ProductId == id);
+        if (isProductExists != null) return new SuccessResult(Messages.ProductExists);
+
+        return new ErrorResult(Messages.ProductDoesNotExist);
     }
 }

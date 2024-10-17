@@ -37,4 +37,8 @@ public static class Messages
     public static string CategoryListed = "Category listed successfully";
     public static string ProductAdded = "Product added successfully";
     public static string ProductsListed = "Products Listed successfully";
+    public static string ProductUpdated = "Product updated successfully";
+    public static string ProductExists = "Product exist";
+    public static string ProductDoesNotExist = "Product doesn't exist";
+    public static string ProductDeleted = "Product deleted successfully";
 }

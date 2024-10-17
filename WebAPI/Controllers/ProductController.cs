@@ -26,4 +26,16 @@ public class ProductController : Controller
     {
         return Ok(_productService.GetAll());
     }
+
+    [HttpPut]
+    public ActionResult<Product> UpdateProduct(Product product)
+    {
+        return Ok(_productService.Update(product));
+    }
+
+    [HttpDelete("{id}")]
+    public ActionResult<Product> DeleteProduct(int id)
+    {
+        return Ok(_productService.Delete(id));
+    }
 }
